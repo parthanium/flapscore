@@ -152,6 +152,33 @@ function loadImg() {
 	p{
 		font-size:1.1em;
 	}
+	@viewport{
+	zoom: 1.0;
+	width: extend-to-zoom;
+}
+@-ms-viewport{
+	width: extend-to-zoom;
+	zoom: 1.0;
+}
+@media screen and (max-width: 640px) {
+	#form{
+		width:90%;
+	}
+	#heading{
+		letter-spacing:0;
+	}
+}
+::-webkit-scrollbar {
+    width: 1rem;
+}
+ 
+::-webkit-scrollbar-track {
+	background-color:transparent;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color:#333;
+}
 	</style>
 </head>
 <body>
@@ -172,7 +199,7 @@ function loadImg() {
 		</p><br>
 		<div id="form" onsubmit="loadImg();">
 		
-			<input id="score" type="number" min="0"step="1" class="frmEl" placeholder=""Your"" score ..."></input>
+			<input id="score" type="number" min="0"step="1" class="frmEl" placeholder="'Your' score ..."></input>
 			<button type="button" onclick="loadImg();" class="frmEl" id="button"> Make!</button>
 		
 			
