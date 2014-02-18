@@ -80,8 +80,12 @@ function loadImg() {
 	img {
 		max-width: 100%;
 	}
+	#score:focus,#button:focus{
+		outline:none;
+	}
 	#score{
 		display:inline-block;
+		border:0;
 		font-family: 'Segoe UI Light',Arial, Helvetica, sans-serif;
 	}
 	#button{
@@ -94,7 +98,7 @@ function loadImg() {
 		color:#fff;
 		font-size:4em;
 		line-height:0.5em;
-		letter-spacing:-20px;
+		letter-spacing:-10px;
 		-webkit-text-stroke:3px #333;
 		text-stroke:3px #333;
 	}
@@ -102,7 +106,7 @@ function loadImg() {
 </head>
 <body>
 	<center>
-		<div id="heading">
+		<div id="heading"><br>
 			<h2>
 				Flappy Bird
 			</h2>
