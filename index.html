@@ -86,7 +86,7 @@ function loadImg() {
 			Simple stuff, just enter your desired score and hit "Make!", I'll see the rest. I'll generate a full 1080p screenshot of the game for you!<br><br>
 			After the screenshot is generated, just right-click and save it. (Or open in new tab and then save)
 		</p>
-		<div id="form">
+		<div id="form" onsubmit="loadImg();">
 			<input id="score" type="number" min="0" step="1" class="frmEl"></input>
 			<button onclick="loadImg();" class="frmEl">Make!</button>
 		</div>
