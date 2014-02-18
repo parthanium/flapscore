@@ -89,6 +89,7 @@ function loadImg() {
 		font-family: 'Segoe UI Light',Arial, Helvetica, sans-serif;
 		width:80%;
 		border-radius:0;
+		font-size:1.3rem;
 		float:left;
 		padding-left:1em;
 		border-bottom-left-radius:1em;
@@ -115,6 +116,7 @@ function loadImg() {
 	#button{
 		display:inline-block;
 		border:0;
+		font-size:1.3rem;
 		width:20%;
 		float:left;
 		color:#fff;
@@ -155,7 +157,7 @@ function loadImg() {
 			After the screenshot is generated, just right-click and save it. (Or open in new tab and then save)
 		</p><br>
 		<div id="form" onsubmit="loadImg();">
-			<input id="score" type="number" min="0" step="1" class="frmEl" placeholder="Your desired score ..."></input>
+			<input id="score" type="number" min="0" max="999999999" step="1" class="frmEl" placeholder="Your desired score ..."></input>
 			<input type="button" onclick="loadImg();" class="frmEl" id="button" value="Make!"></button>
 		</div>
 		<br><br><br>
