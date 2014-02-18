@@ -90,8 +90,8 @@ function loadImg() {
 		width:70%;
 		border-radius:0;
 		float:left;
-		border-left-bottom-radius:0.5em;
-		border-right-bottom-radius:0.5em;
+		border-bottom-left-radius:0.5em;
+		border-bottom-right-radius:0.5em;
 	}
 	*{
 	-webkit-transition:all 0.5s;
@@ -116,6 +116,8 @@ function loadImg() {
 		border:0;
 		width:30%;
 		float:left;
+		border-top-left-radius:0.5em;
+		border-top-right-radius:0.5em;
 		font-family: 'Segoe UI Light',Arial, Helvetica, sans-serif;
 		border-radius:0;
 	}
@@ -151,7 +153,7 @@ function loadImg() {
 			<input id="score" type="number" min="0" step="1" class="frmEl" placeholder="Your desired score ..."></input>
 			<button onclick="loadImg();" class="frmEl" id="button">Make!</button>
 		</div>
-		<br>
+		<br><br><br>
 		<div id="response"></div><br><br>
 		<hr>
 		<p class="text-muted">Made with ♥ by <a href="http://facebook.com/itsreallyakshat">Akshat Mittal</a>.<br><br>
