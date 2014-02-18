@@ -86,6 +86,8 @@ function loadImg() {
 	::selection{
 		background:transparent;
 		color:#333;
+		text-stroke-color:#fff;
+		text-shadow-color:#fff;
 	}
 	#score{
 		display:inline-block;
@@ -129,7 +131,7 @@ function loadImg() {
 		-webkit-border-radius:1em;
 		-moz-border-radius:1em;
 		font-family: 'Segoe UI Light',Arial, Helvetica, sans-serif;
-		border-radius:0;
+		cursor:pointer;
 	}
 	#button:active,#button:hover{
 		background-color:#2980b9;
@@ -167,7 +169,7 @@ function loadImg() {
 		</p><br>
 		<div id="form" onsubmit="loadImg();">
 		<form>
-			<input id="score" type="number" min="0" max="999999999" step="1" class="frmEl" placeholder="Your desired score ..."></input>
+			<input id="score" type="number" min="0"step="1" class="frmEl" placeholder="Your desired score ..."></input>
 			<input type="button" onclick="loadImg();" class="frmEl" id="button" value="Make!"></button>
 		
 			</form>
