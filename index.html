@@ -66,7 +66,6 @@ function loadImg() {
 	.frmEl {
 		width: 100%;
 		height: 40px;
-		float:left;
 	}
 	#form {
 		width: 60%;
@@ -78,6 +77,10 @@ function loadImg() {
 	}
 	#score{
 		display:inline-block;
+	}
+	#button{
+		display:inline-block;
+		border:0;
 	}
 	</style>
 </head>
@@ -92,7 +95,7 @@ function loadImg() {
 		</p>
 		<div id="form" onsubmit="loadImg();">
 			<input id="score" type="number" min="0" step="1" class="frmEl"></input>
-			<button onclick="loadImg();" class="frmEl">Make!</button>
+			<button onclick="loadImg();" class="frmEl" id="button">Make!</button>
 		</div>
 		<br><br>
 		<div id="response"></div>
