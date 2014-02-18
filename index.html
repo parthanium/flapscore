@@ -83,17 +83,22 @@ function loadImg() {
 	#score:focus,#button:focus{
 		outline:none;
 	}
+	::selection{
+		background:transparent;
+		color:#333;
+	}
 	#score{
 		display:inline-block;
 		border:0;
 		font-family: 'Segoe UI Light',Arial, Helvetica, sans-serif;
 		width:80%;
 		border-radius:0;
-		font-size:1.1rem;
+		font-size:1rem;
 		float:left;
 		padding-left:1em;
 		border-bottom-left-radius:1em;
 		border-top-left-radius:1em;
+		border-radius:1em;
 	}
 	*{
 	-webkit-transition:all 0.5s;
@@ -116,7 +121,7 @@ function loadImg() {
 	#button{
 		display:inline-block;
 		border:0;
-		font-size:1.1rem;
+		font-size:1rem;
 		width:20%;
 		float:left;
 		color:#fff;
