@@ -76,7 +76,6 @@ function loadImg() {
 		width: 60%;
 		min-width: 150px;
 		max-width: 800px;
-		border-radius:0.5em;
 	}
 	img {
 		max-width: 100%;
@@ -91,6 +90,8 @@ function loadImg() {
 		width:70%;
 		border-radius:0;
 		float:left;
+		border-left-bottom-radius:0.5em;
+		border-right-bottom-radius:0.5em;
 	}
 	*{
 	-webkit-transition:all 0.5s;
@@ -147,10 +148,10 @@ function loadImg() {
 			After the screenshot is generated, just right-click and save it. (Or open in new tab and then save)
 		</p>
 		<div id="form" onsubmit="loadImg();">
-			<input id="score" type="number" min="0" step="1" class="frmEl"></input>
+			<input id="score" type="number" min="0" step="1" class="frmEl" placeholder="Your desired score ..."></input>
 			<button onclick="loadImg();" class="frmEl" id="button">Make!</button>
 		</div>
-		
+		<br>
 		<div id="response"></div><br><br>
 		<hr>
 		<p class="text-muted">Made with ♥ by <a href="http://facebook.com/itsreallyakshat">Akshat Mittal</a>.<br><br>
