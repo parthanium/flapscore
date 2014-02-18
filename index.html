@@ -1,79 +1,103 @@
-<!DOCTYPE html>
 <html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Flapscore : Make a Flappy Bird screenshot with ease..." />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Flapscore</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/akshatmittal/flapscore">View on GitHub</a>
-
-          <h1 id="project_title">Flapscore</h1>
-          <h2 id="project_tagline">Make a Flappy Bird screenshot with ease...</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/akshatmittal/flapscore/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/akshatmittal/flapscore/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Flapscore maintained by <a href="https://github.com/akshatmittal">akshatmittal</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+<head>
+	<title>Flappy Bird Score Screenshot Maker</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Create a Flappy Bird screenshot with ease, and shock your friends!">
+    <meta name="author" content="Akshat Mittal">
     
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@itsreallyakshat">
+    <meta name="twitter:title" content="Flappy Bird Score Score Screenshot Maker">
+    <meta name="twitter:description" content="Create Flappy Bird score screenshots and shock your friends easily!">
+    <meta name="twitter:creator" content="@itsreallyakshat">
 
-  </body>
+    <meta property="og:title" content="Flappy Bird Score Score Screenshot Maker" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://akshatmittal.github.io/flapscore/" />
+    <meta property="og:description" content="Create Flappy Bird score screenshots and shock your friends easily!" /> 
+    <meta property="og:site_name" content="FlapScore" />
+    <meta property="fb:admins" content="100000581280466" />
+
+    <link rel="author" href="https://plus.google.com/+AkshatMittal?rel=author"/>
+    <link rel="author" href="http://facebook.com/itsreallyakshat"/>
+    <link rel="publisher" href="https://plus.google.com/+AkshatMittal" />
+	<script type="text/javascript">
+	var run = 0;
+function loadImg() {
+	var xmlhttp;
+	var score = document.getElementById('score').value.toString();
+	if(score == "")
+		score = "0";
+	if(run)
+		return false;
+	run = 1;
+	var newCDN = Math.floor(Math.random() * 3) + 1;
+	var url = "http://cdn"+newCDN+".mysong.ga/flapscore.php?score=" + score;
+	document.getElementById('response').innerHTML = "<img src='load.gif'></img>";
+	if(window.XMLHttpRequest) {
+		xmlhttp = new XMLHttpRequest();
+	} else {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange = function () {
+		if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			document.getElementById('response').innerHTML = "<img src='"+url+"'></img>";
+			run = 0;
+		}
+	}
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+}
+	</script>
+	<style type="text/css">
+	body {
+		background: #EDEDED;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	img {
+		max-height: 800px;
+	}
+	#logo {
+		max-height: 200px;
+		width:100%;
+		max-width:540px;
+	}
+	.frmEl {
+		width: 100%;
+		height: 40px;
+	}
+	#form {
+		width: 60%;
+		min-width: 450px;
+		max-width: 800px;
+	}
+	</style>
+</head>
+<body>
+	<center>
+		<img src="img.png" id="logo" alt="Flappy Bird Score Screenshot Maker"></img>
+		<p>
+			You like Flappy Bird? No? You aren't able to make a good score? Yeah? No problem!<br>
+			Win against your friends with this score screenshot maker!<br><br>
+			Simple stuff, just enter your desired score and hit "Make!", I'll see the rest. I'll generate a full 1080p screenshot of the game for you!<br><br>
+			After the screenshot is generated, just right-click and save it. (Or open in new tab and then save)
+		</p>
+		<div id="form">
+			<input id="score" type="number" min="0" step="1" class="frmEl"></input>
+			<button onclick="loadImg();" class="frmEl">Make!</button>
+		</div>
+		<br>
+		<div id="response"></div>
+		<hr>
+		<p class="text-muted">Made with ♥ by <a href="http://facebook.com/itsreallyakshat">Akshat Mittal</a>.<br>
+          <iframe src="http://www.facebook.com/plugins/follow.php?href=http%3A%2F%2Ffacebook.com%2Fitsreallyakshat&amp;width&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;show_faces=true&amp;appId=367581389983871" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px;height:21px;" allowTransparency="true"></iframe>
+          <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fakshatmittal.github.io%2Fflapscore%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=21&amp;appId=367581389983871" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:140px;height:21px;" allowTransparency="true"></iframe>
+          <g:follow href="https://plus.google.com/114260244105928483584" rel="author"></g:follow>
+          <a href="https://twitter.com/itsreallyakshat" class="twitter-follow-button" data-show-count="false">Follow @itsreallyakshat</a>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://akshatmittal.github.io/flapscore/" data-text="Generate a Flappy Bird screenshot easily, and win against your friends!" data-via="itsreallyakshat" data-related="itsreallyakshat" data-hashtags="FlappyBird">Tweet</a>
+        </p>
+	</center>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</body>
 </html>
